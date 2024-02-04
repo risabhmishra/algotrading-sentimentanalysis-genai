@@ -120,13 +120,123 @@ algotrading-sentimentanalysis-genai/
     └── ...
 ```
 
-- **backtest:** Contains the main script for running backtests and strategy definition.
-- **data:** Directory for storing data files, including stock and sentiment data.
-- **output:** Directory for saving backtest results and plots.
-- **.gitignore:** Specifies files and directories to be ignored by version control.
-- **README.md:** Project documentation.
-- **requirements.txt:** List of Python dependencies.
-- **venv:** Virtual environment (generated if using a virtual environment).
+# Getting Client Secrets and Configurations
+
+## 1. Alpaca REST Client
+
+### Requirements:
+- Python 3.7 or later
+- [Alpaca account](https://alpaca.markets/)
+- API key ID and secret (available in your Alpaca account dashboard)
+
+### Configuration:
+
+1. Install the Alpaca Python library:
+
+   ```bash
+   pip install alpaca-trade-api
+   ```
+
+2. Use the API key in your code:
+
+   ```python
+   from alpaca_trade_api import REST
+
+   alpaca_api_key = "YOUR_API_KEY"
+   alpaca_secret_key = "YOUR_SECRET_KEY"
+
+   rest_client = REST(alpaca_api_key, alpaca_secret_key)
+   ```
+
+## 2. OpenAI LLM Client
+
+### Requirements:
+- Python 3.6 or later
+- [OpenAI account](https://beta.openai.com/signup)
+- API key (available in your OpenAI account dashboard)
+
+### Installation:
+
+1. Install the official OpenAI library:
+
+   ```bash
+   pip install openai
+   ```
+
+2. Set your API key as an environment variable:
+
+   ```bash
+   export OPENAI_API_KEY="YOUR_API_KEY"
+   ```
+
+   Alternatively, provide it directly in your code:
+
+   ```python
+   import openai
+
+   openai.api_key = "YOUR_API_KEY"
+   ```
+
+## 3. Llama LLM Client
+
+### Requirements:
+- Python 3.7 or later
+- [Hugging Face account](https://huggingface.co/join) with an access token
+- Token with access to the desired Llama model
+
+### Installation:
+
+1. Install necessary libraries:
+
+   ```bash
+   pip install transformers
+   ```
+
+2. Set your Hugging Face token as an environment variable:
+
+   ```bash
+   export HF_ACCESS_TOKEN="YOUR_TOKEN"
+   ```
+
+## Important:
+Use caution when handling API keys and tokens. Avoid exposing them in public repositories or sharing them without proper security measures.
+
+## Adding to README:
+Feel free to include this information in your README for comprehensive setup instructions.
+
+- **main.py:** 
+  Contains the main script for running backtests and strategy definition.
+
+- **data:** 
+  Directory for storing data files, including stock and sentiment data.
+
+- **output:** 
+  Directory for saving backtest results and plots.
+
+- **llms:** 
+  Contains OpenAI and Llama clients for sentiment analysis.
+
+- **processor:** 
+  Contains stock data processor for preprocessing stock news and sentiment data.
+
+- **runner:** 
+  Contains backtest runner class for backtesting using cerebro and backtrader.
+
+- **sentiment_analysis:** 
+  Contains transformer pipeline for sentiment analysis on news data.
+
+- **strategies:** 
+  Contains code for technical only strategy and technical with sentiment analysis strategy.
+
+- **.gitignore:** 
+  Specifies files and directories to be ignored by version control.
+
+- **README.md:** 
+  Project documentation.
+
+- **requirements.txt:** 
+  List of Python dependencies.
+
 
 ## Contributing
 
