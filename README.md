@@ -1,6 +1,6 @@
 # AlgoTrading with Sentiment Analysis and Backtesting using GenAI
 
-This project provides a framework for sentiment analysis on stock market data and conducting backtesting using Backtrader. It includes functions for downloading stock data from Yahoo Finance, preprocessing sentiment data, and running backtests with customizable strategies.
+This project provides a versatile framework for sentiment analysis on stock market data, conducting backtesting with Backtrader and leveraging generative AI models such as OpenAI, Llama, and Transformers pipeline for sentiment data analysis. It encompasses functionalities for downloading stock data from Yahoo Finance, fetching stock market news data using Alpaca APIs, preprocessing sentiment data, and running backtests with customizable strategies. Integrating advanced language models enhances the sentiment analysis process, allowing for a more nuanced understanding of market sentiments.
 
 ## Table of Contents
 
