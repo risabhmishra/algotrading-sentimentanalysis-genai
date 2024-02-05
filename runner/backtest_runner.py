@@ -1,6 +1,7 @@
 import backtrader as bt
 
 from strategies.technical_with_sentiment_strategy.optimized_strategy import OptimizedStrategy
+from strategies.technical_with_sentiment_strategy.sentiment_data import SentimentData
 
 
 class BacktestRunner:
@@ -18,7 +19,8 @@ class BacktestRunner:
         cerebro = bt.Cerebro()
 
         # Convert data to Backtrader format
-        data_feed = bt.feeds.PandasData(dataname=data, fromdate=start_date, todate=end_date)
+        data_feed = SentimentData(dataname=data)
+
 
         # Add data to cerebro
         cerebro.adddata(data_feed)

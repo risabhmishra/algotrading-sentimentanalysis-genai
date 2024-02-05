@@ -24,5 +24,6 @@ if __name__ == '__main__':
     sentiment_data = processor.preprocess_sentiment_data()
     merged_df = pd.merge(stock_data, sentiment_data, left_index=True, right_index=True, how='left')
 
+
     # Run backtest
-    BacktestRunner.run_backtest(merged_df, STOCK_TICKER, START_DATE, END_DATE)
+    BacktestRunner.run_backtest('data/merged_df.csv', STOCK_TICKER, START_DATE, END_DATE)
