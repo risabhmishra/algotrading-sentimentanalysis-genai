@@ -4,7 +4,7 @@ einops
 accelerate
 langchain
 bitsandbytes
-sentencepeice
+sentencepiece
 openai
 backtrader
 yfinance
